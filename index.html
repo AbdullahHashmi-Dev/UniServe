@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>UniServe — Student Life, Simplified</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
-
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="colour-bar"></div>
+<div class="cbar"></div>
 
-<!-- NAV -->
+<!-- ── NAV ── -->
 <nav>
   <div class="logo">
     <div class="logo-icon">🎓</div>
@@ -26,90 +23,435 @@
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#csr">CSR</a></li>
     <li><a href="#team">Team</a></li>
+    <li><a href="#about">About</a></li>
   </ul>
-  <a class="nav-cta" href="#cta">Get Early Access</a>
+  <button class="nav-cta" onclick="document.querySelector('.eform input').focus();document.querySelector('.cta-s').scrollIntoView({behavior:'smooth'})">Get Early Access</button>
 </nav>
 
-<!-- HERO -->
+<!-- ── HERO ── -->
 <section class="hero">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
-  <div class="hero-badge"><span class="badge-dot"></span> Beta Launching in Lahore — Join the Waitlist</div>
-
-  <h1>
-    University Life,<br>
-    <span class="grad-cyan">All in One</span> <span class="uw">Place</span>
-  </h1>
-
-  <p class="hero-sub">
-    Tutoring, FYP matching, ride-sharing, food deals & task outsourcing — built exclusively for Pakistani university students.
-  </p>
-
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="hero-badge"><span class="bdot"></span> Beta Launching in Lahore — Join the Waitlist</div>
+  <h1>University Life,<br><span class="gc">All in One</span> <span class="yw">Place</span></h1>
+  <p class="hero-sub">Tutoring, FYP matching, ride-sharing, food deals & task outsourcing — built exclusively for Pakistani university students.</p>
   <div class="hero-btns">
-    <a class="btn-primary" href="#cta">🚀 Join the Beta</a>
-    <a class="btn-ghost" href="#services">See How It Works</a>
+    <button class="btn btn-cy" onclick="document.querySelector('.cta-s').scrollIntoView({behavior:'smooth'})">🚀 Join the Beta</button>
+    <button class="btn btn-gh" onclick="document.querySelector('#services').scrollIntoView({behavior:'smooth'})">Explore Services →</button>
   </div>
-
   <div class="hero-stats">
-    <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Core Services</div></div>
-    <div class="stat-div"></div>
-    <div class="stat"><div class="stat-num">PKR 399</div><div class="stat-label">Premium/Month</div></div>
-    <div class="stat-div"></div>
-    <div class="stat"><div class="stat-num">10%</div><div class="stat-label">Revenue to CSR</div></div>
-    <div class="stat-div"></div>
-    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Scholarship Seats</div></div>
+    <div class="stat"><div class="snum">5+</div><div class="slbl">Core Services</div></div>
+    <div class="sdiv"></div>
+    <div class="stat"><div class="snum">PKR 399</div><div class="slbl">Premium/Month</div></div>
+    <div class="sdiv"></div>
+    <div class="stat"><div class="snum">10%</div><div class="slbl">Revenue to CSR</div></div>
+    <div class="sdiv"></div>
+    <div class="stat"><div class="snum">50+</div><div class="slbl">Scholarship Seats</div></div>
   </div>
 </section>
 
-<!-- FEATURES -->
+<!-- ── FEATURES ── -->
 <section class="features" id="features">
-  <div class="sh center">
+  <div class="sh c">
     <span class="sl sl-c">Why UniServe</span>
-    <h2 class="section-title">Everything students need,<br>nothing they don't</h2>
-    <p class="section-sub">Stop juggling 5 different apps. UniServe brings your entire student life into one intelligent platform.</p>
+    <h2 class="st">Everything students need,<br>nothing they don't</h2>
+    <p class="ss">Stop juggling five different apps. UniServe centralises your entire student life into one intelligent platform.</p>
   </div>
-
   <div class="feat-grid">
-    <div class="fc fc-c"><div class="ficon fi-c">🧠</div><h3>Peer Tutoring Network</h3><p>Connect with verified senior students for affordable tutoring.</p></div>
-    <div class="fc fc-o"><div class="ficon fi-o">🔬</div><h3>FYP Team Matching</h3><p>AI-powered matching finds your ideal team.</p></div>
-    <div class="fc fc-c"><div class="ficon fi-g">🛵</div><h3>Ride-Sharing</h3><p>Safe student carpooling.</p></div>
-    <div class="fc fc-y"><div class="ficon fi-y">🍔</div><h3>Food Deals</h3><p>Exclusive discounts.</p></div>
-    <div class="fc fc-r"><div class="ficon fi-r">📋</div><h3>Task Outsourcing</h3><p>Get work done fast.</p></div>
-    <div class="fc fc-c"><div class="ficon fi-c">🎓</div><h3>Scholarships</h3><p>Free access for eligible students.</p></div>
+    <div class="fc fc-c"><div class="ficon fi-c">🧠</div><h3>Peer Tutoring</h3><p>Connect with verified senior students for subject-specific, affordable tutoring sessions — rated and reviewed by peers.</p></div>
+    <div class="fc fc-o"><div class="ficon fi-o">🔬</div><h3>FYP Team Matching</h3><p>AI-powered matching finds your perfect Final Year Project team based on skills, domain, and availability.</p></div>
+    <div class="fc fc-c"><div class="ficon fi-g">🛵</div><h3>Ride-Sharing</h3><p>Campus-verified carpooling with smart route matching, cost splitting, and safety ratings built in.</p></div>
+    <div class="fc fc-y"><div class="ficon fi-y">🍔</div><h3>Food Deals</h3><p>Exclusive discounts from cafes, dhabas, and restaurants near campus — updated weekly, redeemed instantly.</p></div>
+    <div class="fc fc-r"><div class="ficon fi-r">📋</div><h3>Task Outsourcing</h3><p>Post micro-tasks — presentations, research, data entry — and get them done by trusted student freelancers.</p></div>
+    <div class="fc fc-c"><div class="ficon fi-c">🎓</div><h3>Access Scholarship</h3><p>Full premium at zero cost for financially eligible students. Great education should never have a price barrier.</p></div>
   </div>
 </section>
 
-<!-- HOW -->
-<section class="how" id="how">
-  <div class="sh center">
+<!-- ── HOW IT WORKS ── -->
+<section class="how">
+  <div class="sh c">
     <span class="sl sl-c">Process</span>
-    <h2 class="section-title">Up and running in minutes</h2>
+    <h2 class="st">Up and running in minutes</h2>
   </div>
-
   <div class="how-grid">
-    <div class="hs"><div class="sn sn1">1</div><h3>Create Profile</h3></div>
-    <div class="hs"><div class="sn sn2">2</div><h3>Select Services</h3></div>
-    <div class="hs"><div class="sn sn3">3</div><h3>Connect</h3></div>
-    <div class="hs"><div class="sn sn4">4</div><h3>Grow</h3></div>
+    <div class="hs"><div class="sn sn1">1</div><h3>Create Your Profile</h3><p>Sign up with your university email. Auto-verified through your institution.</p></div>
+    <div class="hs"><div class="sn sn2">2</div><h3>Pick Your Services</h3><p>Choose from tutoring, rides, food, FYP matching, or tasks — mix freely.</p></div>
+    <div class="hs"><div class="sn sn3">3</div><h3>Connect & Collaborate</h3><p>Get matched instantly. Chat, schedule, and pay securely in-app.</p></div>
+    <div class="hs"><div class="sn sn4">4</div><h3>Rate & Grow</h3><p>Leave reviews after each session. Top providers earn bonuses and visibility.</p></div>
   </div>
 </section>
 
-<!-- (ALL remaining sections stay EXACT same as your original code) -->
+<!-- ── INTERACTIVE SERVICES ── -->
+<section class="services" id="services">
+  <div class="sh">
+    <span class="sl sl-o">Our Services</span>
+    <h2 class="st">Tap a service to explore</h2>
+    <p class="ss">Every feature is designed to make student life genuinely easier — not just digitally prettier.</p>
+  </div>
 
-<!-- CTA -->
+  <div class="svc-tabs">
+    <button class="stab active-c" onclick="showPanel('ride',this,'active-c')">🛵 Ride-Sharing</button>
+    <button class="stab" onclick="showPanel('fyp',this,'active-o')">🔬 FYP Matching</button>
+    <button class="stab" onclick="showPanel('tutor',this,'active-r')">🧠 Tutoring</button>
+    <button class="stab" onclick="showPanel('food',this,'active-y')">🍔 Food Deals</button>
+    <button class="stab" onclick="showPanel('task',this,'active-g')">⚡ Task Hub</button>
+  </div>
+
+  <!-- RIDE SHARING -->
+  <div class="spanel show" id="panel-ride">
+    <div class="ride-hero">
+      <div>
+        <h3>Campus Ride-Sharing</h3>
+        <p>The smartest way to commute to university. Post your route once, find verified riders instantly, and split costs automatically — every single day.</p>
+      </div>
+      <div class="ride-features">
+        <div class="rf"><div class="rf-icon">🛡️</div> Campus-verified riders — ID checked & university-linked</div>
+        <div class="rf"><div class="rf-icon">📍</div> Smart route matching with live map tracking</div>
+        <div class="rf"><div class="rf-icon">💸</div> Automated cost-split — no awkward money chats</div>
+        <div class="rf"><div class="rf-icon">⭐</div> Two-way ratings after every ride for safety</div>
+        <div class="rf"><div class="rf-icon">🔔</div> Recurring ride schedules — set it once, ride daily</div>
+      </div>
+    </div>
+    <div class="ride-cards">
+      <div class="rcard"><div class="rcard-icon">📅</div><h4>Schedule a Ride</h4><p>Post your weekly commute time and route. Matched riders join automatically.</p></div>
+      <div class="rcard"><div class="rcard-icon">🗺️</div><h4>Live Route Tracking</h4><p>Share live location with your ride group. Family can track too for safety.</p></div>
+      <div class="rcard"><div class="rcard-icon">💳</div><h4>Auto Split Payment</h4><p>Fuel cost divided equally. Paid via in-app wallet — no cash needed.</p></div>
+      <div class="rcard"><div class="rcard-icon">🚨</div><h4>Emergency SOS</h4><p>One-tap SOS alerts your emergency contact and UniServe support instantly.</p></div>
+    </div>
+    <div class="ride-mockup">
+      <h4>🛵 Today's Active Rides — Johar Town → FAST University</h4>
+      <div class="route-visual">
+        <div class="route-stop"><div class="rs-label">From</div><div class="rs-name">Johar Town</div></div>
+        <div class="route-arrow">──></div>
+        <div class="route-stop"><div class="rs-label">Via</div><div class="rs-name">Canal Road</div></div>
+        <div class="route-arrow">──></div>
+        <div class="route-stop"><div class="rs-label">To</div><div class="rs-name">FAST NUCES</div></div>
+      </div>
+      <div class="rider-list">
+        <div class="rider"><div class="r-av" style="background:var(--cyan)">AH</div><div class="r-info"><div class="r-name">Ahmed Hassan</div><div class="r-meta">Departs 8:00 AM · 3 seats</div></div><span class="r-badge rb-g">Open</span></div>
+        <div class="rider"><div class="r-av" style="background:var(--orange)">SR</div><div class="r-info"><div class="r-name">Sara Rehman</div><div class="r-meta">Departs 8:30 AM · 2 seats</div></div><span class="r-badge rb-g">Open</span></div>
+        <div class="rider"><div class="r-av" style="background:var(--crimson)">MK</div><div class="r-info"><div class="r-name">Muhammad Kamran</div><div class="r-meta">Departs 9:00 AM · 1 seat</div></div><span class="r-badge rb-o">1 left</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FYP MATCHING -->
+  <div class="spanel" id="panel-fyp">
+    <div class="fyp-hero">
+      <div>
+        <h3>FYP Team Matching</h3>
+        <p>Finding the right FYP partner is half the battle. UniServe's AI considers your skills, domain interests, work style and availability to build your perfect team.</p>
+      </div>
+      <div class="fyp-steps">
+        <div class="fstep"><div class="fstep-num">1</div> Fill your skill profile — languages, tools, strengths</div>
+        <div class="fstep"><div class="fstep-num">2</div> Pick your project domain & preferred role</div>
+        <div class="fstep"><div class="fstep-num">3</div> Get 3–5 AI-curated team recommendations</div>
+        <div class="fstep"><div class="fstep-num">4</div> Connect, plan, and submit together</div>
+      </div>
+    </div>
+    <div class="fyp-cards">
+      <div class="fyp-card"><div class="fyp-card-icon">🤖</div><h4>AI Team Builder</h4><p>Algorithm weighs skill gaps, complementary strengths, and availability to recommend optimal teams.</p></div>
+      <div class="fyp-card"><div class="fyp-card-icon">🗂️</div><h4>Project Domain Filter</h4><p>Filter by AI/ML, Web Dev, IoT, Cybersecurity, Mobile — or browse all open FYP ideas.</p></div>
+      <div class="fyp-card"><div class="fyp-card-icon">📊</div><h4>Skill Gap Analysis</h4><p>See what skills your team is missing before you commit. Fill gaps by inviting the right member.</p></div>
+      <div class="fyp-card"><div class="fyp-card-icon">👨‍🏫</div><h4>Supervisor Connect</h4><p>Browse available supervisors by department and research interest. Request supervision in one tap.</p></div>
+    </div>
+    <div class="fyp-mockup">
+      <h4>🔬 Recommended Team Members for: AI-Based Attendance System</h4>
+      <div class="team-cards">
+        <div class="tm"><div class="tm-av" style="background:var(--orange)">FA</div><div class="tm-name">Fatima Azam</div><div class="tm-role">Frontend / UI Design</div><div class="skill-tags"><span class="sk">React</span><span class="sk">Figma</span><span class="sk">CSS</span></div><div class="match-pct">✦ 96% match</div></div>
+        <div class="tm"><div class="tm-av" style="background:var(--cyan)">UB</div><div class="tm-name">Usman Baig</div><div class="tm-role">ML Engineer</div><div class="skill-tags"><span class="sk">Python</span><span class="sk">TensorFlow</span><span class="sk">CV</span></div><div class="match-pct">✦ 94% match</div></div>
+        <div class="tm"><div class="tm-av" style="background:var(--crimson)">ZA</div><div class="tm-name">Zara Aslam</div><div class="tm-role">Backend / API</div><div class="skill-tags"><span class="sk">Node.js</span><span class="sk">MongoDB</span><span class="sk">REST</span></div><div class="match-pct">✦ 91% match</div></div>
+        <div class="tm"><div class="tm-av" style="background:#059669">HK</div><div class="tm-name">Hassan Khan</div><div class="tm-role">IoT / Hardware</div><div class="skill-tags"><span class="sk">Arduino</span><span class="sk">Raspberry Pi</span></div><div class="match-pct">✦ 88% match</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUTORING -->
+  <div class="spanel" id="panel-tutor">
+    <div class="tutor-hero">
+      <div>
+        <h3>Peer Tutoring Network</h3>
+        <p>Get help from students who just passed the course you're struggling with. Real experience, affordable rates, and flexible scheduling built around your timetable.</p>
+      </div>
+      <div class="tutor-perks">
+        <div class="tperk"><div class="tp-icon">✅</div> All tutors verified by academic record & reviews</div>
+        <div class="tperk"><div class="tp-icon">📅</div> Book sessions around your class timetable</div>
+        <div class="tperk"><div class="tp-icon">🎥</div> Online or in-person sessions — your choice</div>
+        <div class="tperk"><div class="tp-icon">🔒</div> Escrow payment — only released after session ends</div>
+        <div class="tperk"><div class="tp-icon">📈</div> Progress tracking across multiple sessions</div>
+      </div>
+    </div>
+    <div class="tutor-cards">
+      <div class="tcard"><div class="tcard-icon">📐</div><h4>Subject Matching</h4><p>Search by course code, topic, or university. Get tutors who took the same course.</p></div>
+      <div class="tcard"><div class="tcard-icon">🎯</div><h4>Session Goals</h4><p>Set learning objectives before each session. Track what you've covered over time.</p></div>
+      <div class="tcard"><div class="tcard-icon">💬</div><h4>In-App Messaging</h4><p>Chat with your tutor before booking. Share notes, slides, and past papers securely.</p></div>
+      <div class="tcard"><div class="tcard-icon">📝</div><h4>Post-Session Notes</h4><p>Auto-generated session summaries emailed to you after every tutoring session.</p></div>
+    </div>
+    <div class="tutor-mockup">
+      <h4>🧠 Top Tutors — Data Structures & Algorithms</h4>
+      <div class="tutor-list">
+        <div class="tut"><div class="tut-av" style="background:var(--crimson)">AK</div><div class="tut-name">Ali Kamran</div><div class="tut-subj">DSA · OOP · C++</div><div class="tut-stars">★★★★★ 4.9 (38 sessions)</div><div class="tut-price">PKR 400 / hour</div></div>
+        <div class="tut"><div class="tut-av" style="background:var(--cyan)">NB</div><div class="tut-name">Nida Bukhari</div><div class="tut-subj">DSA · Python · Algorithms</div><div class="tut-stars">★★★★★ 4.8 (52 sessions)</div><div class="tut-price">PKR 350 / hour</div></div>
+        <div class="tut"><div class="tut-av" style="background:var(--orange)">SM</div><div class="tut-name">Saad Malik</div><div class="tut-subj">DSA · Java · DBMS</div><div class="tut-stars">★★★★☆ 4.6 (24 sessions)</div><div class="tut-price">PKR 300 / hour</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOD DEALS -->
+  <div class="spanel" id="panel-food">
+    <div class="food-hero">
+      <div>
+        <h3>Student Food Deals</h3>
+        <p>Exclusive discounts at the places you actually eat — dhabas, cafes, and fast food joints within 2km of your campus. Flash your digital student card and save instantly.</p>
+      </div>
+      <div class="food-perks">
+        <div class="fp"><div class="fp-icon">🗺️</div> Deals within 2km of your registered campus</div>
+        <div class="fp"><div class="fp-icon">📲</div> Digital student card — show on phone at checkout</div>
+        <div class="fp"><div class="fp-icon">🔄</div> New deals added every Monday morning</div>
+        <div class="fp"><div class="fp-icon">🍱</div> Group order coordination for friend groups</div>
+        <div class="fp"><div class="fp-icon">⚡</div> Flash deals — limited time offers during exams</div>
+      </div>
+    </div>
+    <div class="food-cards">
+      <div class="focard"><div class="focard-icon">🗺️</div><h4>Campus Deal Map</h4><p>Interactive map of all partner restaurants within walking distance of your campus.</p></div>
+      <div class="focard"><div class="focard-icon">🔔</div><h4>Deal Alerts</h4><p>Get notified when new deals drop or when a favourite restaurant offers a flash discount.</p></div>
+      <div class="focard"><div class="focard-icon">👥</div><h4>Group Orders</h4><p>Coordinate group orders with friends. One person collects, everyone pays in-app.</p></div>
+      <div class="focard"><div class="focard-icon">📊</div><h4>Savings Tracker</h4><p>See how much you've saved this semester using UniServe food deals. Brag to friends.</p></div>
+    </div>
+    <div class="food-mockup">
+      <h4>🍔 Today's Top Deals Near FAST NUCES Lahore</h4>
+      <div class="deal-cards">
+        <div class="deal"><div class="deal-emoji">☕</div><div class="deal-name">Espresso Lab</div><div class="deal-loc">200m from gate</div><div class="deal-off">30% off all drinks</div><span class="deal-badge">Expires Tonight</span></div>
+        <div class="deal"><div class="deal-emoji">🍕</div><div class="deal-name">Pizza Hub</div><div class="deal-loc">500m · DHA Phase 6</div><div class="deal-off">Buy 1 Get 1 Free</div><span class="deal-badge">Weekend Only</span></div>
+        <div class="deal"><div class="deal-emoji">🍛</div><div class="deal-name">Desi Dhaba</div><div class="deal-loc">100m · Opposite gate</div><div class="deal-off">Meal for PKR 150</div><span class="deal-badge">Daily Special</span></div>
+        <div class="deal"><div class="deal-emoji">🧋</div><div class="deal-name">Boba District</div><div class="deal-loc">800m · Canal Road</div><div class="deal-off">20% off all boba</div><span class="deal-badge">New Partner</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TASK HUB -->
+  <div class="spanel" id="panel-task">
+    <div class="task-hero">
+      <div>
+        <h3>Student Task Hub</h3>
+        <p>Post small tasks and get them done by trusted student freelancers on campus. Every provider signs our academic integrity policy — no ghost-writing, only legitimate assistance.</p>
+      </div>
+      <div class="task-perks">
+        <div class="tkp"><div class="tkp-icon">🔒</div> Escrow payment — money released on task approval</div>
+        <div class="tkp"><div class="tkp-icon">📋</div> AI screening — flags academic dishonesty requests</div>
+        <div class="tkp"><div class="tkp-icon">⚡</div> Most tasks completed within 24 hours</div>
+        <div class="tkp"><div class="tkp-icon">⭐</div> Reviewed providers with verified university IDs</div>
+        <div class="tkp"><div class="tkp-icon">💬</div> Real-time chat and file sharing with your provider</div>
+      </div>
+    </div>
+    <div class="task-cards">
+      <div class="tkcard"><div class="tkcard-icon">🎨</div><h4>Presentation Design</h4><p>Get your slides professionally designed by a student who knows academic formats well.</p></div>
+      <div class="tkcard"><div class="tkcard-icon">📊</div><h4>Data Entry & Analysis</h4><p>Excel sheets, survey analysis, SPSS or Python data tasks done quickly and accurately.</p></div>
+      <div class="tkcard"><div class="tkcard-icon">🌐</div><h4>Translation</h4><p>Urdu ↔ English document translation by verified bilingual students — fast and accurate.</p></div>
+      <div class="tkcard"><div class="tkcard-icon">📷</div><h4>Graphic Design</h4><p>Posters, social posts, infographics — designed by campus creative students in Canva or Figma.</p></div>
+    </div>
+    <div class="task-mockup">
+      <h4>⚡ Recent Task Listings</h4>
+      <div class="task-list">
+        <div class="tsk"><div class="tsk-icon">🎨</div><div class="tsk-info"><div class="tsk-title">PowerPoint for Software Engineering presentation (15 slides)</div><div class="tsk-meta">Posted 2hrs ago · Due tomorrow</div></div><div class="tsk-price">PKR 800</div><span class="tsk-status ts-open">Open</span></div>
+        <div class="tsk"><div class="tsk-icon">📊</div><div class="tsk-info"><div class="tsk-title">Clean & analyse survey data in Excel (200 responses)</div><div class="tsk-meta">Posted 5hrs ago · Due in 3 days</div></div><div class="tsk-price">PKR 600</div><span class="tsk-status ts-prog">In Progress</span></div>
+        <div class="tsk"><div class="tsk-icon">🌐</div><div class="tsk-info"><div class="tsk-title">Translate 4-page Urdu research summary to English</div><div class="tsk-meta">Posted 1hr ago · Due in 2 days</div></div><div class="tsk-price">PKR 500</div><span class="tsk-status ts-open">Open</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section id="pricing">
+  <div class="sh c">
+    <span class="sl sl-c">Pricing</span>
+    <h2 class="st">Simple, student-friendly pricing</h2>
+    <p class="ss">Start free, upgrade when ready. No hidden fees, no long-term lock-in.</p>
+  </div>
+  <div class="price-grid">
+    <div class="pc">
+      <div class="pn pn-f">Free</div>
+      <div class="pp">PKR 0 <span>/ month</span></div>
+      <div class="pd">Perfect for exploring UniServe and casual use.</div>
+      <ul class="pf">
+        <li><span class="ck">✓</span> Browse tutors & listings</li>
+        <li><span class="ck">✓</span> 3 ride-share requests/month</li>
+        <li><span class="ck">✓</span> Basic food deals</li>
+        <li><span class="ck">✓</span> FYP profile listing</li>
+        <li><span class="cx">—</span> Priority tutor matching</li>
+        <li><span class="cx">—</span> Unlimited ride requests</li>
+        <li><span class="cx">—</span> Task outsourcing</li>
+      </ul>
+      <button class="bp bp-g">Get Started Free</button>
+    </div>
+    <div class="pc feat">
+      <div class="fb2">✦ Most Popular</div>
+      <div class="pn pn-p">Premium</div>
+      <div class="pp">PKR 399 <span>/ month</span></div>
+      <div class="pd">Everything you need for a stress-free semester.</div>
+      <ul class="pf">
+        <li><span class="ck">✓</span> Priority tutor matching</li>
+        <li><span class="ck">✓</span> Unlimited ride requests</li>
+        <li><span class="ck">✓</span> All food deals + alerts</li>
+        <li><span class="ck">✓</span> AI FYP team recommendations</li>
+        <li><span class="ck">✓</span> Full task outsourcing</li>
+        <li><span class="ck">✓</span> 24/7 support</li>
+        <li><span class="ck">✓</span> Scholarship eligibility</li>
+      </ul>
+      <button class="bp bp-c">Upgrade to Premium</button>
+    </div>
+    <div class="pc sch">
+      <div class="pn pn-s">Scholarship</div>
+      <div class="pp">PKR 0 <span>/ year</span></div>
+      <div class="pd">Full premium for financially eligible students.</div>
+      <ul class="pf">
+        <li><span class="cr">✓</span> All Premium features</li>
+        <li><span class="cr">✓</span> Mentorship program</li>
+        <li><span class="cr">✓</span> Senior tutor allocation</li>
+        <li><span class="cr">✓</span> Financial aid network</li>
+        <li><span class="cr">✓</span> Community events</li>
+        <li><span class="cr">✓</span> 1 full academic year</li>
+        <li><span class="cr">✓</span> Renewable annually</li>
+      </ul>
+      <button class="bp bp-r">Apply for Scholarship</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── CSR ── -->
+<section class="csr" id="csr">
+  <div class="cb1"></div><div class="cb2"></div>
+  <div class="csr-in">
+    <div>
+      <span class="sl sl-r">Social Impact</span>
+      <h2 class="st">No student left behind</h2>
+      <p class="ss">The UniServe Access Scholarship Program ensures financial constraints never block a student from their potential. 10% of every subscription funds full premium access for underprivileged students — in partnership with university financial aid offices.</p>
+      <div class="ctags">
+        <span class="ctag">First-generation students</span>
+        <span class="ctag">Low-income backgrounds</span>
+        <span class="ctag">Mentorship included</span>
+        <span class="ctag">University-partnered</span>
+      </div>
+    </div>
+    <div class="cstats">
+      <div class="cs cs-c"><div class="n nc">10%</div><div class="l">Revenue to scholarship</div></div>
+      <div class="cs cs-y"><div class="n ny">50+</div><div class="l">Seats per semester</div></div>
+      <div class="cs cs-o"><div class="n no">1 yr</div><div class="l">Full premium access</div></div>
+      <div class="cs cs-r"><div class="n nr">100%</div><div class="l">Feature access for scholars</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KPIs ── 
+<section class="kpis">
+  <div class="sh c">
+    <span class="sl sl-o">MVP Targets</span>
+    <h2 class="st">Our Month 1 Goals</h2>
+    <p class="ss">Transparent, measurable KPIs we're publicly committed to hitting at launch.</p>
+  </div>
+  <div class="kpi-grid">
+    <div class="kc kc-c"><div class="kl">Monthly Active Users</div><div class="kt">500 Users</div><div class="kbb"><div class="kb kb-c" style="width:84%"></div></div><div class="kf">Tracked Weekly</div></div>
+    <div class="kc kc-o"><div class="kl">Tutor Completion Rate</div><div class="kt">85%+</div><div class="kbb"><div class="kb kb-o" style="width:91%"></div></div><div class="kf">Tracked Weekly</div></div>
+    <div class="kc kc-c"><div class="kl">App Store Rating</div><div class="kt">4.2★</div><div class="kbb"><div class="kb kb-c" style="width:88%"></div></div><div class="kf">Tracked Monthly</div></div>
+    <div class="kc kc-r"><div class="kl">Support Response</div><div class="kt">&lt; 4 hrs</div><div class="kbb"><div class="kb kb-r" style="width:80%"></div></div><div class="kf">Tracked Daily</div></div>
+    <div class="kc kc-o"><div class="kl">Premium Conversion</div><div class="kt">10%</div><div class="kbb"><div class="kb kb-o" style="width:70%"></div></div><div class="kf">Tracked Monthly</div></div>
+    <div class="kc kc-c"><div class="kl">Platform Uptime</div><div class="kt">99.5%</div><div class="kbb"><div class="kb kb-c" style="width:99%"></div></div><div class="kf">Tracked Daily</div></div>
+  </div>
+</section>
+-->
+
+<!-- ── TEAM ── -->
+<section id="team">
+  <div class="sh c">
+    <span class="sl sl-c">The Team</span>
+    <h2 class="st">Built by students, for students</h2>
+    <p class="ss">A cross-functional BS Software Engineering team running every function of UniServe.</p>
+  </div>
+  <div class="team-grid">
+    <div class="tc tc-c"><div class="av av-c">AH</div><h4>Abdullah Hashmi</h4><div class="role rl-c">CEO & Strategy</div><div class="idn">Roll #67</div></div>
+    <div class="tc tc-o"><div class="av av-o">SR</div><h4>Shakeeb Ur Rehman</h4><div class="role rl-o">CTO & Platform</div><div class="idn">Roll #92</div></div>
+    <div class="tc tc-r"><div class="av av-r">HR</div><h4>Humaiza Riazat</h4><div class="role rl-r">HR & Operations</div><div class="idn">Roll #62</div></div>
+    <div class="tc tc-y"><div class="av av-y">FA</div><h4>Fatima Azam</h4><div class="role rl-y">Marketing & CSR</div><div class="idn">Roll #63</div></div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
 <section class="cta-s" id="cta">
-  <h2>Ready to simplify your university life?</h2>
-
+  <span class="sl" style="background:rgba(255,255,255,.15);color:#fff;">Early Access</span>
+  <h2>Ready to simplify<br>your university life?</h2>
+  <p>Join 200+ students already on the waitlist. Beta launches in Lahore this semester.</p>
   <div class="eform">
-    <input type="email" placeholder="Enter your university email..." />
+    <input type="email" placeholder="Enter your university email..."/>
     <button onclick="handleSignup(this)">Join Waitlist →</button>
   </div>
+  <p class="cta-note">Use your .edu.pk or university email for priority access.</p>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 UniServe</p>
+<footer class="footer-about" id="about">
+  <div class="about-grid">
+
+    <!-- BRAND + ABOUT -->
+    <div class="ab-brand">
+      <div class="logo">
+        <div class="logo-icon">🎓</div>
+        <span class="logo-text">Uni<span>Serve</span></span>
+      </div>
+      <p>UniServe is a fictional student-focused tech startup conceived to centralise all essential university services — tutoring, FYP collaboration, ride-sharing, food deals, and task outsourcing — into one intelligent mobile platform. Born from the real pain points of Pakistani university students, UniServe is built on the belief that student life should be productive, connected, and equitable for everyone.</p>
+      <p style="margin-top:12px;color:rgba(255,255,255,.5);font-size:.88rem;line-height:1.7;">Developed as part of the Introduction to Management course (BSSE), under the guidance of <strong style="color:rgba(255,255,255,.7)">Muhammad Asad Ayaz Khan</strong>.</p>
+      <div class="socials">
+        <div class="social-btn" title="Instagram">📷</div>
+        <div class="social-btn" title="LinkedIn">💼</div>
+        <div class="social-btn" title="Twitter/X">𝕏</div>
+        <div class="social-btn" title="Facebook">👍</div>
+        <div class="social-btn" title="Email">✉️</div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="fcol">
+      <h5>Services</h5>
+      <a href="#services" onclick="showPanel('tutor',null,'active-r');return false;">🧠 Peer Tutoring</a>
+      <a href="#services" onclick="showPanel('fyp',null,'active-o');return false;">🔬 FYP Matching</a>
+      <a href="#services" onclick="showPanel('ride',null,'active-c');return false;">🛵 Ride-Sharing</a>
+      <a href="#services" onclick="showPanel('food',null,'active-y');return false;">🍔 Food Deals</a>
+      <a href="#services" onclick="showPanel('task',null,'active-g');return false;">⚡ Task Hub</a>
+      <a href="#csr">🎓 Scholarship</a>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="fcol">
+      <h5>Company</h5>
+      <a href="#about">About UniServe</a>
+      <a href="#team">Our Team</a>
+      <a href="#csr">CSR Program</a>
+      <a href="#csr">Scholarship Fund</a>
+      <a href="#features">Vision & Mission</a>
+      <a href="#">Press Kit</a>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="fcol">
+      <h5>Support</h5>
+      <a href="#">Contact Us</a>
+      <a href="#">Help Centre / FAQ</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Academic Integrity</a>
+      <a href="#">Report an Issue</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom-bar">
+    <p>© 2025 UniServe — Intro to Management, BSSE | Instructor: Muhammad Asad Ayaz Khan</p>
+    <div class="palette-dots">
+      <div class="pd-dot" style="background:var(--cyan)"></div>
+      <div class="pd-dot" style="background:var(--yellow)"></div>
+      <div class="pd-dot" style="background:var(--orange)"></div>
+      <div class="pd-dot" style="background:var(--crimson)"></div>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>
